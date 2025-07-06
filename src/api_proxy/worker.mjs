@@ -68,7 +68,10 @@ const handleOPTIONS = async () => {
   });
 };
 
-const BASE_URL = "https://generativelanguage.googleapis.com";
+let BASE_URL = "https://generativelanguage.googleapis.com";
+if(env.BASE_URL) {
+	BASE_URL = env.BASE_URL;
+}
 const API_VERSION = "v1beta";
 
 // https://github.com/google-gemini/generative-ai-js/blob/cf223ff4a1ee5a2d944c53cddb8976136382bee6/src/requests/request.ts#L71
